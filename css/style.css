@@ -1,0 +1,151 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+body h1, body h2, body p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  background-color: #f2f2f2;
+}
+
+/* ==== VERSION MOBILE ==== */
+/*MOBILE RESTAURANTS*/
+.result {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.result h1 {
+  margin-bottom: 20px;
+}
+
+.list-restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100%;
+}
+
+.list-restaurant a {
+  width: 90%;
+}
+
+.card-restaurant {
+  width: 100%;
+  height: 280px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.card-restaurant img {
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-restaurant .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+}
+
+.card-restaurant .tag h2 {
+  margin-bottom: 6px;
+}
+
+.card-restaurant .tag i {
+  font-size: 30px;
+}
+
+.card-restaurant .newtag {
+  display: none;
+}
+
+.new {
+  position: relative;
+}
+
+.new .newtag {
+  display: block;
+  position: absolute;
+  color: #067f55;
+  font-weight: bold;
+  background-color: #99E2D0;
+  padding: 6px 10px;
+  top: 15px;
+  right: 12px;
+}
+
+/*MOBILE FOOTER*/
+footer {
+  width: 100%;
+  background-color: #4C4A4A;
+}
+
+footer img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+footer ul {
+  color: white;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+footer ul h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+}
+
+footer ul li {
+  margin-bottom: 6px;
+}
+
+footer ul i {
+  margin-right: 15px;
+  width: 10px;
+  font-size: 12px;
+}
+/*# sourceMappingURL=style.css.map */
