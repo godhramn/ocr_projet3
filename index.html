@@ -35,49 +35,61 @@
 
     <header>
 
-      <img class="ohmyfood-logo" src="assets/img/logo/ohmyfood.png" alt="ohmyfood-logo">
+      <img class="header__logo" src="assets/img/logo/ohmyfood.png" alt="ohmyfood-logo">
     
-
-      <nav>
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#restaurants">Explorer nos restaurants</a>
-      </nav>
-
     </header>
-
+    
     <main>
 
+      <section class="nav">
+        <nav>
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Paris, Belleville</p>
+          </div>
+          <div class="navbar">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <a class="btn btn--pink shadowed" href="#restaurants">Explorer nos restaurants</a>
+          </div>
+        </nav>
+      </section>
+
       <section class="steps">
-        
-        <h1>Fonctionnement</h1>
-
-        <a href="#">
-
-        </a>
-
-        <a href="#">
-
-        </a>
-
-        <a href="#">
-
-        </a>
+        <ul>
+          <h1>Fonctionnement</h1>
+          <li>
+              <span class="steps-number">1</span>
+              <span class="steps-name shadowed">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Choisissez un restaurant</p>
+              </span>
+          </li>
+          <li>
+              <span class="steps-number">2</span>
+              <span class="steps-name shadowed">
+                <i class="fa-solid fa-list"></i>
+                <p>Composez votre menu</p>
+              </span>
+          </li>
+          <li>
+              <span class="steps-number">3</span>
+              <span class="steps-name shadowed">
+                <i class="fa-solid fa-store"></i>
+                <p>Dégustez au restaurant</p>
+              </span>
+          </li>
+        </ul>
 
       </section>
 
       <section class="result" id="restaurants">
-
         <h1>Restaurants</h1>
-
-        <div class="list-restaurant">
-
-          <a href="/page1.html">
-            <article class="card-restaurant new">
-            
-              <img src="/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="food plate  restaurant la palette du goût">
+        <div class="result-list">
+          <a href="page1.html">
+            <article class="result-list__card new shadowed">
+              <img src="assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="food plate at restaurant La palette du goût">
               <p class="newtag">Nouveau</p>
-            
               <div class="tag">
                 <div class="nametag">
                   <h2>La palette du goût</h2>
@@ -85,16 +97,13 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
               </div>
-            
             </article>
           </a>
 
-          <a href="/page2.html">
-            <article class="card-restaurant new">
-            
-              <img src="/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="food plate restaurant La note enchantée">
+          <a href="page2.html">
+            <article class="result-list__card new shadowed">
+              <img src="assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="food plate at restaurant La note enchantée">
               <p class="newtag">Nouveau</p>
-
               <div class="tag">
                 <div class="nametag">
                   <h2>La note enchantée</h2>
@@ -102,16 +111,13 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
               </div>
-            
             </article>
           </a>
 
-          <a href="/page3.html">
-            <article class="card-restaurant">
-              
-              <img src="assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="food plate  restaurant à la française">
+          <a href="page3.html">
+            <article class="result-list__card shadowed">
+              <img src="assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="food plate at restaurant à la française">
               <p class="newtag">Nouveau</p>
-
               <div class="tag">
                 <div class="nametag">
                   <h2>À la française</h2>
@@ -119,16 +125,13 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
               </div>
-              
             </article>
           </a>
 
           <a href ="page4.html">
-            <article class="card-restaurant">
-                
-              <img src="assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"  alt="food plate restaurant le délice des sens">
+            <article class="result-list__card shadowed">   
+              <img src="assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"  alt="food plate at restaurant le délice des sens">
               <p class="newtag">Nouveau</p>
-
               <div class="tag">
                 <div class="nametag">
                   <h2>Le délice des sens</h2>
@@ -136,14 +139,10 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
               </div>
-                
             </article>
           </a>
-
         </div>
-
       </section>
-
     </main>
 
     <footer>
