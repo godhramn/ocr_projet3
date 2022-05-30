@@ -1,9 +1,4 @@
-$grey: #f9f9f9;
-$purple: #9356DC;
-$pink: #FF76DA;
-$mint: #99E2D0;
-$dark-grey: #4C4A4A;
-$shadow: rgba(44, 44, 44, 0.2);
+@import "utils/variables";
 
 body{
   font-family: "Roboto", sans-serif;
@@ -56,16 +51,16 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EEEEEE;
+    background-color: darken($grey, 5%);
     font-weight: bold;
     padding: 15px;
     p{
-      color: #454545;
+      color: $dark-grey;
     }
     i{
       margin-right: 15px;
       font-size: 18px;
-      color: #454545;
+      color: $dark-grey;
     }
   }
   .navbar{
@@ -95,24 +90,28 @@ nav{
   }
   &--pink{
     color: white;  
-    background: linear-gradient(to right bottom, $pink, $purple);
+    background: linear-gradient(to right bottom, $color-secondary, $color-primary);
   }
 }
 
 .steps{
   margin-bottom: 70px;
   ul{
-    padding-left: 5px;
+    padding-left: 0;
+    h1{
+      margin: 45px 5% 25px;
+    }
   }
   li{
     display: flex;
     align-items: center;
     width: 95%;
     margin-bottom: 20px; 
+    padding-left: 5px;
   }
   
   &-number{
-    background-color: $purple;
+    background-color: $color-primary;
     border-radius: 100%;
     color: white;
     padding: 2px 8px;
@@ -126,7 +125,7 @@ nav{
     height: 100%;
     width: 100%;
     border-radius: 20px;
-    background-color: #F9F9F9;
+    background-color: $grey;
     padding: 30px 20px;
     font-weight: bold;
     i{
@@ -139,56 +138,11 @@ nav{
       color: black;
     }
     &:hover{
-      background-color: #F3EDF9;
+      background-color: lighten($color-primary, 35%);
       i{
-        color: $purple;
+        color: $color-primary;
       }
 
-    }
-  }
-}
-
-/* Pages des Restaurants*/
-
-header a{
-  font-size: 25px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-
-.restaurant-image{
-  img{
-    height: 290px;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    position: absolute;
-  }
-}
-
-.menu{
-  border-radius: 50px 50px 0 0 ;
-  padding: 30px 20px;
-  margin-top: 230px;
-  z-index: -2;
-  background-color: $grey;
-  h1{
-    margin: 0;
-    font-family: Shrikhand, cursive;
-    font-weight: 100;
-    font-size: 28px;
-  }
-  h2{
-    font-weight: 350;
-  }
-  .restaurant-name{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    i{
-      font-size: 30px;
-      margin-right: 15px;
     }
   }
 }
@@ -196,7 +150,7 @@ header a{
 
 /* ==== VERSION MOBILE ==== */
 
-/*MOBILE RESTAURANTS*/
+/*MOBILE HOMEPAGE*/
 
 h1{
   font-size: 25px;
@@ -214,6 +168,9 @@ p{
   height: 100%;
   padding-top: 10px;
   padding-bottom: 50px;
+  h1{
+    margin: 45px 5% 25px;
+  }
 }
 
 .result-list{
@@ -265,9 +222,9 @@ p{
   .newtag{
     display: block;
     position:absolute;
-    color: #067f55;
+    color: darken($color-tertiary, 35%);
     font-weight: bold;
-    background-color: $mint;
+    background-color: $color-tertiary;
     padding: 6px 10px;
     top: 15px;
     right: 12px;
@@ -279,26 +236,106 @@ p{
 
 footer{
   width: 100%;
+  color: white;
   background-color: $dark-grey;
-    ul{
-      color: white;
-      margin-bottom: 40px;
-      padding-left: 25px;
-      h2{
-        font-family: "Shrikhand", cursive;
-        font-weight: 100;
-        margin-bottom: 15px;
-      }
-      li{
-        margin-bottom: 8px;
-        &:hover{
-          text-decoration: underline;
-        }
-      }
-      i{
-        margin-right: 15px;
-        width: 10px;
-        font-size: 15px;
+  
+  h2{
+    font-family: "Shrikhand", cursive;
+    font-weight: 100;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    padding-top: 15px;
+  }
+  ul{
+    margin-bottom: 40px;
+    padding-left: 25px;
+    li{
+      margin-bottom: 8px;
+      &:hover{
+        text-decoration: underline;
       }
     }
+    i{
+      margin-right: 15px;
+      width: 10px;
+      font-size: 15px;
+    }
+  }
+}
+
+/* MOBILE MENUS */
+
+header a{
+  font-size: 25px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.restaurant-image{
+  img{
+    height: 290px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+.menu{
+  border-radius: 50px 50px 0 0 ;
+  padding: 30px 20px;
+  margin-top: 230px;
+  z-index: -2;
+  background-color: $grey;
+  h1{
+    margin: 0;
+    font-family: "Shrikhand", cursive;
+    font-weight: 100;
+    font-size: 28px;
+  }
+  h2{
+    font-weight: 350;
+    margin: 40px 0 20px;
+    border-bottom: solid $color-tertiary;
+  }
+  .restaurant-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i{
+      font-size: 30px;
+      margin-right: 15px;
+    }
+  }
+
+  article{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    min-height: 70px;
+    .dish-content{
+      width: 90%;
+      padding: 10px;
+    }
+    h3{
+      margin: 0;
+    }
+    .tag{
+      display: flex;
+      justify-content: space-between;
+      &__description{
+        width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__price{
+        font-weight: 500;
+      }
+    }
+    .order-add{
+      display: none;
+    }
+  }
 }
