@@ -3,8 +3,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0;
   height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 45px 15px 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
 }
 
 h2, p {
@@ -20,21 +33,19 @@ ul {
   list-style-type: none;
 }
 
+/* ombres pour les cartes */
 .shadowed {
   box-shadow: 2px 5px 9px rgba(44, 44, 44, 0.2);
 }
 
 header {
   text-align: center;
-  box-shadow: 0 5px 9px rgba(44, 44, 44, 0.3);
+  box-shadow: 0 3px 7px rgba(44, 44, 44, 0.2);
+  z-index: 1;
 }
 header img {
   width: 180px;
   padding: 20px 0 10px;
-}
-
-h1 {
-  margin: 45px 15px 25px;
 }
 
 nav {
@@ -72,6 +83,7 @@ nav .navbar h1 {
   margin-bottom: 10px;
 }
 
+/* BOUTONS*/
 .btn {
   font-size: 16px;
   max-width: 200px;
@@ -81,6 +93,7 @@ nav .navbar h1 {
 }
 .btn:hover {
   opacity: 0.7;
+  box-shadow: 5px 8px 15px #4C4A4A;
 }
 .btn-order {
   margin: 40px 0;
@@ -90,6 +103,8 @@ nav .navbar h1 {
   background: linear-gradient(to right bottom, #FF76DA, #9356DC);
 }
 
+/* ====== HOMEPAGE  ====== */
+/* ETAPES */
 .steps {
   margin-bottom: 70px;
 }
@@ -125,13 +140,10 @@ nav .navbar h1 {
   font-weight: bold;
 }
 .steps-name i {
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 23px;
   font-size: 18px;
   color: #959595;
-}
-.steps-name p {
-  color: black;
 }
 .steps-name:hover {
   background-color: #f2eafb;
@@ -140,20 +152,7 @@ nav .navbar h1 {
   color: #9356DC;
 }
 
-/* ==== VERSION MOBILE ==== */
-/*MOBILE HOMEPAGE*/
-h1 {
-  font-size: 25px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-p {
-  font-size: 18px;
-}
-
+/*RESULTAT*/
 .result {
   background-color: #f9f9f9;
   width: 100%;
@@ -183,7 +182,6 @@ p {
 }
 .result-list__card:hover {
   opacity: 0.7;
-  height: 300px;
 }
 .result-list__card img {
   width: 100%;
@@ -223,7 +221,7 @@ p {
   right: 12px;
 }
 
-/*MOBILE FOOTER*/
+/*FOOTER*/
 footer {
   width: 100%;
   color: white;
@@ -252,7 +250,8 @@ footer ul i {
   font-size: 15px;
 }
 
-/* MOBILE MENUS */
+/* == PAGES RESTAURANTS == */
+/* MENUS */
 header a {
   font-size: 25px;
   position: absolute;
@@ -301,6 +300,7 @@ header a {
   justify-content: space-between;
   border-radius: 20px;
   min-height: 70px;
+  margin-bottom: 20px;
 }
 .menu article .dish-content {
   width: 90%;
@@ -324,4 +324,96 @@ header a {
 }
 .menu article .order-add {
   display: none;
+}
+
+.btn-order {
+  text-align: center;
+  margin-top: 60px;
+}
+.btn-order .btn {
+  padding: 15px 12%;
+}
+
+/* ====== VERSION TABLETTE ====== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .result-list {
+    justify-content: space-evenly;
+  }
+  .result-list a {
+    width: 40%;
+  }
+}
+/* ====== VERSION DESKTOP ====== */
+@media screen and (min-width: 1024px) {
+  html {
+    min-height: 768px;
+  }
+
+  main {
+    height: 100%;
+  }
+
+  .steps {
+    margin-bottom: 40px;
+  }
+  .steps ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+  }
+  .steps ul li {
+    width: 30%;
+  }
+  .steps ul .steps-name {
+    padding: 10px 20px;
+  }
+
+  .result-list {
+    justify-content: space-evenly;
+  }
+  .result-list a {
+    width: 23%;
+  }
+
+  .restaurant-image img {
+    height: 450px;
+  }
+
+  .menu {
+    height: 100%;
+    margin-top: 400px;
+  }
+  .menu .set {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .restaurant-name {
+    width: 100%;
+  }
+  .menu .set-list {
+    width: 30%;
+  }
+  .menu article {
+    min-height: 90px;
+  }
+  .menu .dish-content {
+    align-self: center;
+  }
+
+  .btn-order {
+    align-self: center;
+  }
+  .btn-order .btn {
+    padding: 15px 5%;
+  }
+
+  footer h2 {
+    padding-left: 0;
+    text-align: center;
+  }
+  footer ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -5,8 +5,19 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0;
   height: 100%;
+  margin: 0;
+}
+
+h1{
+  font-size: 25px;
+  margin: 45px 15px 25px;
+}
+h2{
+  font-size: 20px;
+}
+p{
+  font-size: 18px;
 }
 
 h2, p{
@@ -22,23 +33,20 @@ ul{
 list-style-type: none;
 }
 
+/* ombres pour les cartes */
 .shadowed{
   box-shadow: 2px 5px 9px $shadow;
 }
 
 header{
   text-align: center;
-  box-shadow: 0 5px 9px rgba(44, 44, 44, 0.3);
+  box-shadow: 0 3px 7px $shadow;
+  z-index: 1;
   img{
     width: 180px;
     padding: 20px 0 10px;
   }
 }
-
-h1{
-  margin: 45px 15px 25px;
-}
-
 
 nav{
   text-align: center;
@@ -73,8 +81,9 @@ nav{
       margin-bottom: 10px;
     }
   }
-  
 }
+
+/* BOUTONS*/
 
 .btn{
   font-size: 16px;
@@ -84,6 +93,7 @@ nav{
   border-radius: 30px;
   &:hover{
     opacity: 0.7;
+    box-shadow: 5px 8px 15px $dark-grey;
   }
   &-order{
     margin: 40px 0;
@@ -93,6 +103,11 @@ nav{
     background: linear-gradient(to right bottom, $color-secondary, $color-primary);
   }
 }
+
+
+/* ====== HOMEPAGE  ====== */
+
+/* ETAPES */
 
 .steps{
   margin-bottom: 70px;
@@ -129,38 +144,21 @@ nav{
     padding: 30px 20px;
     font-weight: bold;
     i{
-      margin-left: 10px;
-      margin-right: 20px;
+      margin-left: 15px;
+      margin-right: 23px;
       font-size: 18px;
       color: #959595;
-    }
-    p{
-      color: black;
     }
     &:hover{
       background-color: lighten($color-primary, 35%);
       i{
         color: $color-primary;
       }
-
     }
   }
 }
 
-
-/* ==== VERSION MOBILE ==== */
-
-/*MOBILE HOMEPAGE*/
-
-h1{
-  font-size: 25px;
-}
-h2{
-  font-size: 20px;
-}
-p{
-  font-size: 18px;
-}
+/*RESULTAT*/
 
 .result{
   background-color: $grey;
@@ -189,7 +187,6 @@ p{
   margin-bottom: 20px;
   &:hover{
     opacity: 0.7;
-    height: 300px;
   }
     img{
       width:100%;
@@ -232,7 +229,7 @@ p{
   }
 }
 
-/*MOBILE FOOTER*/
+/*FOOTER*/
 
 footer{
   width: 100%;
@@ -263,7 +260,9 @@ footer{
   }
 }
 
-/* MOBILE MENUS */
+/* == PAGES RESTAURANTS == */
+
+/* MENUS */
 
 header a{
   font-size: 25px;
@@ -314,6 +313,7 @@ header a{
     justify-content: space-between;
     border-radius: 20px;
     min-height: 70px;
+    margin-bottom: 20px;
     .dish-content{
       width: 90%;
       padding: 10px;
@@ -338,4 +338,107 @@ header a{
       display: none;
     }
   }
+}
+
+.btn-order{
+  text-align: center;
+  margin-top: 60px;
+  .btn{
+    padding: 15px 12%;
+  }
+}
+
+
+/* ====== VERSION TABLETTE ====== */
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+  .result-list{
+    justify-content: space-evenly;
+    a{
+      width: 40%;
+    }
+  }
+
+}
+
+/* ====== VERSION DESKTOP ====== */
+
+@media screen and(min-width: 1024px){
+  html{
+    min-height: 768px;
+  }
+
+  main{
+    height: 100%;
+  }
+
+  .steps{
+    margin-bottom: 40px;
+    ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+      li{
+        width: 30%;
+      }
+      .steps-name{
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .result-list{
+    justify-content: space-evenly;
+    a{
+      width: 23%;
+    }
+  }
+
+  .restaurant-image{
+    img{
+      height: 450px;
+    }
+  }
+  
+  .menu{
+    height: 100%;
+    margin-top: 400px;
+    .set{
+      display: flex;
+      justify-content: space-between;
+    }
+    .restaurant-name{
+      width: 100%;
+    }
+    .set-list{
+      width: 30%;
+    }
+    article{
+      min-height: 90px;
+    }
+    .dish-content{
+      align-self: center;
+    }
+    
+  }
+
+  .btn-order{
+    align-self: center;
+    .btn{
+      padding: 15px 5%;
+    }
+  }
+
+  footer{
+    h2{
+      padding-left: 0;
+      text-align: center;
+    }
+    ul{
+      padding-left: 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
 }
