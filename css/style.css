@@ -6,12 +6,12 @@
   height: 100%;
   z-index: 1000;
   background: whitesmoke;
-  -webkit-animation: fadeIn 2.7s 300ms linear both;
-          animation: fadeIn 2.7s 300ms linear both;
+  -webkit-animation: fadeOut 2.7s 300ms linear both;
+          animation: fadeOut 2.7s 300ms linear both;
 }
 
 .loading-spinner {
-  position: absolute;
+  position: fixed;
   align-self: center;
   z-index: 1001;
   top: 50%;
@@ -31,11 +31,14 @@
   transform: scale(1);
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeOut {
   0% {
     opacity: 0.9;
   }
-  50% {
+  70% {
+    opacity: 0.9;
+  }
+  80% {
     opacity: 0.6;
   }
   99% {
@@ -47,11 +50,14 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
   0% {
     opacity: 0.9;
   }
-  50% {
+  70% {
+    opacity: 0.9;
+  }
+  80% {
     opacity: 0.6;
   }
   99% {
@@ -64,24 +70,88 @@
 }
 @-webkit-keyframes loading-spinner {
   0% {
-    transform: scale(0.5) rotate(0deg);
+    transform: scale(0.5) rotate(0turn);
   }
   50% {
-    transform: scale(1.5) rotate(360deg);
+    transform: scale(1.5) rotate(1.5turn);
   }
   100% {
-    transform: scale(0) rotate(720deg);
+    transform: scale(0) rotate(3.5turn);
   }
 }
 @keyframes loading-spinner {
   0% {
-    transform: scale(0.5) rotate(0deg);
+    transform: scale(0.5) rotate(0turn);
   }
   50% {
-    transform: scale(1.5) rotate(360deg);
+    transform: scale(1.5) rotate(1.5turn);
   }
   100% {
-    transform: scale(0) rotate(720deg);
+    transform: scale(0) rotate(3.5turn);
+  }
+}
+.dish .order-add {
+  width: 0;
+  transition: width 500ms;
+}
+.dish .order-add i {
+  transform: rotate(0deg);
+  transition: transform 500ms;
+}
+.dish:hover .order-add {
+  width: 10%;
+}
+.dish:hover .order-add i {
+  transform: rotate(360deg);
+}
+.dish__1 {
+  -webkit-animation: fadeIn 1s linear both, closer 1s linear both;
+          animation: fadeIn 1s linear both, closer 1s linear both;
+}
+.dish__2 {
+  -webkit-animation: fadeIn 1s 300ms linear both, closer 1s linear both;
+          animation: fadeIn 1s 300ms linear both, closer 1s linear both;
+}
+.dish__3 {
+  -webkit-animation: fadeIn 1s 600ms linear both, closer 1s linear both;
+          animation: fadeIn 1s 600ms linear both, closer 1s linear both;
+}
+.dish__4 {
+  -webkit-animation: fadeIn 1s 900ms linear both, closer 1s linear both;
+          animation: fadeIn 1s 900ms linear both, closer 1s linear both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes closer {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes closer {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 body {
@@ -408,8 +478,13 @@ header a {
 }
 .menu h2 {
   font-weight: 350;
-  margin: 40px 0 20px;
-  border-bottom: solid #99E2D0;
+  margin: 40px 0 5px;
+}
+.menu .border {
+  background-color: #99E2D0;
+  height: 2px;
+  width: 15%;
+  margin-bottom: 20px;
 }
 .menu .restaurant-name {
   display: flex;
@@ -433,7 +508,8 @@ header a {
 }
 .menu article .dish-content {
   width: 90%;
-  padding: 10px;
+  height: 100%;
+  padding: 10px 0 0 10px;
 }
 .menu article h3 {
   margin: 0;
@@ -443,7 +519,6 @@ header a {
   justify-content: space-between;
 }
 .menu article .tag__description {
-  width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -452,7 +527,17 @@ header a {
   font-weight: 500;
 }
 .menu article .order-add {
-  display: none;
+  overflow: hidden;
+  background: #99E2D0;
+  border-radius: 0 20px 20px 0;
+}
+.menu article .order-add i {
+  position: relative;
+  font-size: 25px;
+  width: 100%;
+  top: 35%;
+  text-align: center;
+  color: white;
 }
 
 .btn-order {

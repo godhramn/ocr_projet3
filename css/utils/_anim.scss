@@ -9,12 +9,12 @@
     height: 100%;
     z-index: 1000;
     background: whitesmoke;
-    animation: fadeIn $loading-time $loading-delay linear both;
+    animation: fadeOut $loading-time $loading-delay linear both;
   }
 }
 
 .loading-spinner{
-  position: absolute;
+  position: fixed;
   align-self: center;
   z-index: 1001;
   top: 50%;
@@ -35,12 +35,16 @@
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
   0% {
     opacity: 0.9;
   }
 
-  50%{
+  70%{
+    opacity: 0.9;
+  }
+
+  80%{
     opacity: 0.6;
   }
 
@@ -56,14 +60,71 @@
 
 @keyframes loading-spinner{
     0% {
-      transform: scale(0.5) rotate(0deg);
+      transform: scale(0.5) rotate(0turn);
     }
 
     50%{
-      transform: scale(1.5) rotate(360deg);
+      transform: scale(1.5) rotate(1.5turn);
     }
 
     100%{
-      transform: scale(0) rotate(720deg);
+      transform: scale(0) rotate(3.5turn);
     }
 }
+
+
+.dish{
+  .order-add{
+    width: 0;
+    transition: width $order-pop;
+    i{
+      transform: rotate(0deg);
+      transition: transform $order-pop;
+    }
+  }
+  &:hover{
+    .order-add{
+      width: 10%;
+      i{
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+
+
+  &__1{
+    animation: fadeIn 1s linear both, closer 1s linear both;
+  }
+  &__2{
+    animation: fadeIn 1s 300ms linear both, closer 1s linear both;
+  }
+  &__3{
+    animation: fadeIn 1s 600ms linear both, closer 1s linear both;
+  }
+  &__4{
+    animation: fadeIn 1s 900ms linear both, closer 1s linear both;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes closer{
+  0%{
+    transform: translateY(20%);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+

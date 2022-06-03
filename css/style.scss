@@ -337,8 +337,13 @@ header a{
   }
   h2{
     font-weight: 350;
-    margin: 40px 0 20px;
-    border-bottom: solid $color-tertiary;
+    margin: 40px 0 5px;
+  }
+  .border{
+    background-color: $color-tertiary;
+    height: 2px;
+    width: 15%;
+    margin-bottom: 20px;
   }
   .restaurant-name{
     display: flex;
@@ -362,7 +367,8 @@ header a{
     margin-bottom: 20px;
     .dish-content{
       width: 90%;
-      padding: 10px;
+      height: 100%;
+      padding: 10px 0 0 10px;
     }
     h3{
       margin: 0;
@@ -371,7 +377,6 @@ header a{
       display: flex;
       justify-content: space-between;
       &__description{
-        width: 90%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -381,7 +386,17 @@ header a{
       }
     }
     .order-add{
-      display: none;
+      overflow: hidden;
+      background: $color-tertiary;
+      border-radius: 0 20px 20px 0;
+      i{
+        position: relative;
+        font-size: 25px;
+        width: 100%;
+        top: 35%;
+        text-align: center;
+        color: white;
+      }
     }
   }
 }
