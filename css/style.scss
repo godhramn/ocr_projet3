@@ -34,6 +34,25 @@ ul{
 list-style-type: none;
 }
 
+.homepage{
+  #disabled{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: whitesmoke;
+  }
+}
+
+.loading-spinner{
+  position: fixed;
+  align-self: center;
+  z-index: 1001;
+  top: 50%;
+}
+
 .circles{
   &-row-1, &-row-3{
     text-align: center;
@@ -135,9 +154,13 @@ nav{
     border: none;
     background: none;
     cursor: pointer;
+    .fa-solid{
+      background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
+      background-clip: text;
+      color: transparent;
+    }
   }
 }
-
 
 /* ====== HOMEPAGE  ====== */
 
@@ -207,16 +230,15 @@ nav{
 
 .result-list{
   display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   justify-content: center;
-  align-content: space-between;
   &__card{
-  position:relative;
-  width: 90%;
-  height: 260px;
-  background-color: white;
-  border-radius: 20px;
-  margin-bottom: 20px;
+    position: relative;
+    width: 90%;
+    height: 260px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
   &:hover{
     opacity: 0.7;
   }
@@ -257,17 +279,15 @@ nav{
 }
 
 .new{
-  position: relative;
   .newtag{
     display: block;
-    position:absolute;
+    position: absolute;
     color: darken($color-tertiary, 35%);
     font-weight: bold;
     background-color: $color-tertiary;
     padding: 6px 10px;
     top: 15px;
     right: 12px;
-    
   }
 }
 
@@ -368,10 +388,13 @@ header a{
     .dish-content{
       width: 90%;
       height: 100%;
-      padding: 10px 0 0 10px;
+      padding: 10px 0 0;
+      margin-left: 10px;
+      overflow: hidden;
     }
     h3{
       margin: 0;
+      text-overflow: ellipsis;
     }
     .tag{
       display: flex;
@@ -417,9 +440,9 @@ header a{
     justify-content: space-evenly;
     &__card{
       width: 40%;
+      margin-bottom: 40px;
     }
   }
-
 }
 
 /* ====== VERSION DESKTOP ====== */

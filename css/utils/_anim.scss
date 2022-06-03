@@ -2,29 +2,16 @@
 
 .homepage{
   #disabled{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    background: whitesmoke;
     animation: fadeOut $loading-time $loading-delay linear both;
   }
 }
 
 .loading-spinner{
-  position: fixed;
-  align-self: center;
-  z-index: 1001;
-  top: 50%;
   animation: loading-spinner $loading-time $loading-delay linear both;
 }
+
 .btn-like{
     .fa-solid{
-      background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
-      background-clip: text;
-      color: transparent;
       transform: scale(0);
       transition: transform 500ms;
     }
@@ -33,6 +20,37 @@
         transform: scale(1);
       }
     }
+}
+
+.dish{
+  .order-add{
+    width: 0;
+    transition: width $order-pop 100ms;
+    i{
+      transform: rotate(0deg);
+      transition: transform $order-pop;
+    }
+  }
+  &:hover{
+    .order-add{
+      width: 70px;
+      i{
+        transform: rotate(360deg);
+      }
+    }
+  }
+  &__1{
+    animation: fadeIn 1s linear both, closer 1s linear both;
+  }
+  &__2{
+    animation: fadeIn 1s 300ms linear both, closer 1s linear both;
+  }
+  &__3{
+    animation: fadeIn 1s 600ms linear both, closer 1s linear both;
+  }
+  &__4{
+    animation: fadeIn 1s 900ms linear both, closer 1s linear both;
+  }
 }
 
 @keyframes fadeOut {
@@ -70,41 +88,6 @@
     100%{
       transform: scale(0) rotate(3.5turn);
     }
-}
-
-
-.dish{
-  .order-add{
-    width: 0;
-    transition: width $order-pop;
-    i{
-      transform: rotate(0deg);
-      transition: transform $order-pop;
-    }
-  }
-  &:hover{
-    .order-add{
-      width: 10%;
-      i{
-        transform: rotate(360deg);
-      }
-    }
-  }
-
-
-
-  &__1{
-    animation: fadeIn 1s linear both, closer 1s linear both;
-  }
-  &__2{
-    animation: fadeIn 1s 300ms linear both, closer 1s linear both;
-  }
-  &__3{
-    animation: fadeIn 1s 600ms linear both, closer 1s linear both;
-  }
-  &__4{
-    animation: fadeIn 1s 900ms linear both, closer 1s linear both;
-  }
 }
 
 @keyframes fadeIn{
