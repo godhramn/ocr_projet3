@@ -512,8 +512,7 @@ header a {
 .menu article .dish-content {
   width: 90%;
   height: 100%;
-  padding: 10px 0 0;
-  margin-left: 10px;
+  padding: 10px 10px 0 10px;
   overflow: hidden;
 }
 .menu article h3 {
