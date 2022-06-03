@@ -1,4 +1,5 @@
 @import "utils/variables";
+@import "utils/anim";
 
 body{
   font-family: "Roboto", sans-serif;
@@ -31,6 +32,34 @@ a{
 
 ul{
 list-style-type: none;
+}
+
+.circles{
+  &-row-1, &-row-3{
+    text-align: center;
+    margin-bottom: 0;
+  }
+  &-row-2 i{
+    margin: 0 10px;
+  }
+  &-row-3 i{
+    margin: 7px 4px;
+  }
+  &__1{
+    color: blue;
+  }
+  &__2{
+    color: $color-primary;
+  }
+  &__3{
+    color: $color-secondary;
+  }
+  &__4{
+    color: $color-tertiary;
+  }
+  &__5{
+    color: darken($color-tertiary, 35%);
+  }
 }
 
 /* ombres pour les cartes */
@@ -101,6 +130,11 @@ nav{
   &--pink{
     color: white;  
     background: linear-gradient(to right bottom, $color-secondary, $color-primary);
+  }
+  &-like{
+    border: none;
+    background: none;
+    cursor: pointer;
   }
 }
 
@@ -176,11 +210,9 @@ nav{
   flex-flow: wrap;
   justify-content: center;
   align-content: space-between;
-  a{
-    width: 90%;
-  }
   &__card{
-  width: 100%;
+  position:relative;
+  width: 90%;
   height: 260px;
   background-color: white;
   border-radius: 20px;
@@ -200,11 +232,21 @@ nav{
       align-items: center;
       padding: 12px;
       height: 20%;
+      a{
+        width: 80%;
+      }
+      .nametag{
+        width: 100%;
+      }
       h2{
         margin-bottom: 6px;
       }
       i{
-        font-size: 30px;
+        font-size: 25px;
+      }
+      .fa-solid{
+        position: absolute;
+        right: 18px;
       }
     }
     .newtag{
@@ -306,6 +348,10 @@ header a{
       font-size: 30px;
       margin-right: 15px;
     }
+    .fa-solid{
+      position: absolute;
+      right: 26px;
+    }
   }
 
   article{
@@ -354,7 +400,7 @@ header a{
 @media screen and (min-width: 768px) and (max-width:1023px){
   .result-list{
     justify-content: space-evenly;
-    a{
+    &__card{
       width: 40%;
     }
   }
@@ -389,7 +435,7 @@ header a{
 
   .result-list{
     justify-content: space-evenly;
-    a{
+    &__card{
       width: 23%;
     }
   }
@@ -426,18 +472,6 @@ header a{
     align-self: center;
     .btn{
       padding: 15px 5%;
-    }
-  }
-
-  footer{
-    h2{
-      padding-left: 0;
-      text-align: center;
-    }
-    ul{
-      padding-left: 0;
-      display: flex;
-      justify-content: space-evenly;
     }
   }
 
