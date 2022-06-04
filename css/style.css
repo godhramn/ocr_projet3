@@ -10,10 +10,19 @@
 
 .btn-like .fa-solid {
   transform: scale(0);
+  transform-origin: bottom;
   transition: transform 500ms;
+  overflow: hidden;
 }
 .btn-like:hover .fa-solid, .btn-like:focus .fa-solid {
   transform: scale(1);
+}
+
+.result-list__card {
+  transition: transform 300ms;
+}
+.result-list__card:hover {
+  transform: scale(1.05);
 }
 
 .dish .order-add {
@@ -305,9 +314,6 @@ nav .navbar h1 {
 .steps ul {
   padding-left: 0;
 }
-.steps ul h1 {
-  margin: 45px 5% 25px;
-}
 .steps li {
   display: flex;
   align-items: center;
@@ -346,6 +352,10 @@ nav .navbar h1 {
   color: #9356DC;
 }
 
+.steps h1, .result h1 {
+  margin: 45px 5% 25px;
+}
+
 /*RESULTAT*/
 .result {
   background-color: #f9f9f9;
@@ -353,9 +363,6 @@ nav .navbar h1 {
   height: 100%;
   padding-top: 10px;
   padding-bottom: 50px;
-}
-.result h1 {
-  margin: 45px 5% 25px;
 }
 
 .result-list {
@@ -486,7 +493,7 @@ header a {
 .menu .border {
   background-color: #99E2D0;
   height: 2px;
-  width: 15%;
+  width: 50px;
   margin-bottom: 20px;
 }
 .menu .restaurant-name {
@@ -554,6 +561,18 @@ header a {
 }
 
 /* ====== VERSION TABLETTE ====== */
+@media screen and (min-width: 768px) and (max-width: 1023px) and (min-width: 845px) {
+  .steps ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .steps h1, .result h1 {
+    margin: 45px 4% 25px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .result-list {
     justify-content: space-evenly;
@@ -586,6 +605,10 @@ header a {
   }
   .steps ul .steps-name {
     padding: 10px 20px;
+  }
+
+  .steps h1, .result h1 {
+    margin: 45px 2% 25px;
   }
 
   .result-list {

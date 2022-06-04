@@ -13,13 +13,22 @@
 .btn-like{
     .fa-solid{
       transform: scale(0);
+      transform-origin: bottom;
       transition: transform 500ms;
+      overflow: hidden;
     }
     &:hover, &:focus{
       .fa-solid{
         transform: scale(1);
       }
     }
+}
+
+.result-list__card{
+  transition: transform 300ms;
+  &:hover{
+    transform: scale(1.05);
+  }
 }
 
 .dish{

@@ -170,9 +170,6 @@ nav{
   margin-bottom: 70px;
   ul{
     padding-left: 0;
-    h1{
-      margin: 45px 5% 25px;
-    }
   }
   li{
     display: flex;
@@ -215,6 +212,12 @@ nav{
   }
 }
 
+.steps, .result{
+  h1{
+    margin: 45px 5% 25px;
+  }
+}
+
 /*RESULTAT*/
 
 .result{
@@ -223,9 +226,6 @@ nav{
   height: 100%;
   padding-top: 10px;
   padding-bottom: 50px;
-  h1{
-    margin: 45px 5% 25px;
-  }
 }
 
 .result-list{
@@ -362,7 +362,7 @@ header a{
   .border{
     background-color: $color-tertiary;
     height: 2px;
-    width: 15%;
+    width: 50px;
     margin-bottom: 20px;
   }
   .restaurant-name{
@@ -435,6 +435,23 @@ header a{
 /* ====== VERSION TABLETTE ====== */
 
 @media screen and (min-width: 768px) and (max-width:1023px){
+
+  .steps{
+    @media screen and(min-width: 845px){
+      ul{
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+      }
+    }
+  }
+
+  .steps, .result{
+    h1{
+      margin: 45px 4% 25px;
+    }
+  }
+
   .result-list{
     justify-content: space-evenly;
     &__card{
@@ -467,6 +484,12 @@ header a{
       .steps-name{
         padding: 10px 20px;
       }
+    }
+  }
+
+  .steps, .result{
+    h1{
+      margin: 45px 2% 25px;
     }
   }
 
