@@ -333,16 +333,18 @@ nav .navbar h1 {
 .steps-name {
   display: flex;
   align-items: center;
+  text-align: center;
   height: 100%;
   width: 100%;
   border-radius: 20px;
   background-color: #f9f9f9;
   padding: 30px 20px;
   font-weight: bold;
+  font-size: 17px;
 }
 .steps-name i {
-  margin-left: 24px;
-  margin-right: 32px;
+  margin-left: 5%;
+  margin-right: 8%;
   font-size: 20px;
   color: #959595;
 }

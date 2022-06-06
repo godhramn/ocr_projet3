@@ -191,15 +191,17 @@ nav{
   &-name{
     display: flex;
     align-items: center;
+    text-align: center;
     height: 100%;
     width: 100%;
     border-radius: 20px;
     background-color: $grey;
     padding: 30px 20px;
     font-weight: bold;
+    font-size: 17px;
     i{
-      margin-left: 24px;
-      margin-right: 32px;
+      margin-left: 5%;
+      margin-right: 8%;
       font-size: 20px;
       color: #959595;
     }
@@ -297,7 +299,6 @@ footer{
   width: 100%;
   color: white;
   background-color: $dark-grey;
-  
   h2{
     font-family: "Shrikhand", cursive;
     font-weight: 100;
@@ -525,14 +526,11 @@ header a{
     .dish-content{
       align-self: center;
     }
-    
   }
-
   .btn-order{
     align-self: center;
     .btn{
       padding: 15px 5%;
     }
   }
-
 }
