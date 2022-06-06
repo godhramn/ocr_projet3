@@ -18,13 +18,14 @@
   transform: scale(1);
 }
 
-.result-list__card {
-  transition: transform 300ms;
+@media screen and (min-width: 1024px) {
+  .result-list__card {
+    transition: transform 300ms;
+  }
+  .result-list__card:hover {
+    transform: scale(1.05);
+  }
 }
-.result-list__card:hover {
-  transform: scale(1.05);
-}
-
 .dish .order-add {
   width: 0;
   transition: width 500ms 100ms;
@@ -340,9 +341,9 @@ nav .navbar h1 {
   font-weight: bold;
 }
 .steps-name i {
-  margin-left: 15px;
-  margin-right: 23px;
-  font-size: 18px;
+  margin-left: 24px;
+  margin-right: 32px;
+  font-size: 20px;
   color: #959595;
 }
 .steps-name:hover {
@@ -379,7 +380,7 @@ nav .navbar h1 {
   margin-bottom: 20px;
 }
 .result-list__card:hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .result-list__card img {
   width: 100%;

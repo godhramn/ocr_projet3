@@ -31,7 +31,7 @@ a{
 }
 
 ul{
-list-style-type: none;
+  list-style-type: none;
 }
 
 .homepage{
@@ -198,9 +198,9 @@ nav{
     padding: 30px 20px;
     font-weight: bold;
     i{
-      margin-left: 15px;
-      margin-right: 23px;
-      font-size: 18px;
+      margin-left: 24px;
+      margin-right: 32px;
+      font-size: 20px;
       color: #959595;
     }
     &:hover{
@@ -240,7 +240,7 @@ nav{
     border-radius: 20px;
     margin-bottom: 20px;
   &:hover{
-    opacity: 0.7;
+    opacity: 0.9;
   }
     img{
       width:100%;
